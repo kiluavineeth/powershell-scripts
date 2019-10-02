@@ -1,0 +1,9 @@
+// Divides all the numbers by 1024
+30000, 56798, 12432 | ForEach-Object -Process {$_/1024}
+29.296875
+55.466796875
+12.140625
+
+// Deletes all the branches which has "vineeth/m" string in it.
+git branch | ForEach-Object -Process { if ($_ -like "*vineeth/m*" ){git branch -D $_.trim()}}
+
